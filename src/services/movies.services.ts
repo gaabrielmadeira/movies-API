@@ -1,11 +1,10 @@
-import { AppDataSource } from "../data-source";
 import { Movie } from "../entities";
-import { Pagination, PaginationParams, moviesCreate, moviesRead, moviesRepo, moviesUpdate } from "../interfaces";
+import { Pagination, PaginationParams, moviesCreate, moviesRead, moviesUpdate } from "../interfaces";
 import { MoviesRepo } from "../repositories";
 
 const create = async (payload: moviesCreate): Promise<Movie> => {
-  const repo: moviesRepo = AppDataSource.getRepository(Movie);
-  return await MoviesRepo.save(payload);
+  const movieCreate: Movie = MoviesRepo.create(payload);
+  return await MoviesRepo.save(movieCreate);
 };
 
 const read = async ({
