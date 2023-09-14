@@ -1,1 +1,1 @@
-
+API para filmes, criada no intuito de praticar o framework express e o ORM TypeORM. Uma API de filmes onde o CRUD consiste em criar, buscar e atualizar um filme. Foi utilizado o SGBD PostgreSQL em um banco de dados relacional.
